@@ -14,7 +14,7 @@ const getAllProducts = async (req: Request, res: Response) => {
 const editProductById = async (req: Request, res: Response) => {
   try {
     // db logic
-    res.status(200).send({ data: 'updated product' });
+    res.status(201).send({ data: 'updated product' });
   } catch (error) {
     res.send({ error: error });
   }
