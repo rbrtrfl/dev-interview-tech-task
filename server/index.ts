@@ -15,5 +15,5 @@ const httpServer = createServer(app);
 app.use('/', router);
 
 httpServer.listen(PORT, () => {
-  console.log(`🚀 Server up and listening on ${PORT}`); // eslint-disable-line
+  console.log(`🚀 Server up and listening on port ${PORT}`); // eslint-disable-line
 });

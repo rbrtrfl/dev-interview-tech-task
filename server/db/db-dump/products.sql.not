@@ -1,0 +1,20 @@
+DROP TABLE IF EXISTS tea;
+CREATE TABLE IF NOT EXISTS tea
+(
+    id    INT             PRIMARY KEY,
+    brand	varchar(50)     NOT NULL,
+    name	varchar(50)     NOT NULL,
+    tags	varchar(50)     NOT NULL,
+    image	varchar(300)    NOT NULL
+);
+
+INSERT INTO tea (id,brand,name,tags,image)
+VALUES
+    (1, 'Teekanne', 'Winterzeit', '', 'https://static.mueller.de/7006629865-PV-0/pdmain/teekanne-winterzeit-20er.jpg'),
+    (2, 'Teekane', 'Hüttenzauber', '', 'https://frogcoffee.de/media/image/8b/91/b1/1031520894a_600x600.png'),
+    (3, 'Teekanne', 'Süßer Bratapfel', '', 'https://cdn.idealo.com/folder/Product/5674/4/5674432/s1_produktbild_gross/suesser-bratapfel-20-stk.jpg'),
+    (4, 'Meßmer', 'Wintertraum', '', 'https://www.messmer.de/media/78/f5/c9/1622529998/messmer_wintertraumzimtsternorange.png'),
+    (5, 'Yogi Tea', 'Halswärmer', '', 'https://www.yogitea.com/site/assets/files/20317/yogi-tea-throat-comfort-de.600x0.png'),
+    (6, 'Teekanne', 'Innere Ruhe', '', 'https://m.media-amazon.com/images/I/51pM1yN4SQL.jpg'),
+    (7, 'Meßmer', 'Glühwein Gewürz', '', 'https://www.messmer.de/media/35/43/b5/1622723995/messmer_gluehweingewuerz.png'),
+    (8, 'Teekanne', 'Kaminabend', '', 'https://img.rewe-static.de/7011041/27043195_digital-image.png');
