@@ -3,9 +3,8 @@ import morgan from 'morgan';
 import cors from 'cors';
 import { createServer } from 'http';
 import router from './routes/index';
-import "reflect-metadata"
 
-const PORT = 4000;
+const PORT = 3000;
 
 const app = express();
 app.use(cors());
