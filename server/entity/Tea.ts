@@ -1,21 +1,19 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
-export class Tea {
-
+export default class Tea {
     @PrimaryGeneratedColumn()
-    id!: number
+      id!: number;
 
     @Column()
-    brand!: string
+      brand!: string;
 
     @Column()
-    name!: string
+      name!: string;
 
     @Column()
-    tags!: string
+      tags!: string;
 
     @Column()
-    image!: string
-
+      image!: string;
 }

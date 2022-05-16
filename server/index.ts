@@ -3,7 +3,8 @@ import morgan from 'morgan';
 import cors from 'cors';
 import { createServer } from 'http';
 import router from './routes/index';
-import { AppDataSource } from "./data-source"
+import AppDataSource from './data-source';
+import 'reflect-metadata';
 
 const PORT = 3000;
 
@@ -19,6 +20,4 @@ AppDataSource.initialize().then(async () => {
   httpServer.listen(PORT, () => {
     console.log(`🚀 Server up and listening on port ${PORT}`); // eslint-disable-line
   });
-}).catch(error => console.log(error))
-
-
+}).catch((error) => console.log(error)); // eslint-disable-line

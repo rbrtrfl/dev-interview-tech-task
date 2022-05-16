@@ -1,30 +1,26 @@
 import { Request, Response } from 'express';
-import { AppDataSource } from '../data-source';
-import { Tea } from '../entity/Tea';
-
+import AppDataSource from '../data-source';
+import Tea from '../entity/Tea';
 
 const getAllProducts = async (req: Request, res: Response) => {
   try {
     const allProducts = await AppDataSource.manager.find(Tea);
-    console.log(allProducts);
     res.status(200).send({ data: allProducts });
   } catch (error) {
-    console.log(error)
-    res.send({ error: error });
+    res.send({ error });
   }
 };
 
-// edit event information: title, desc, max participans & min participants
 const editProductById = async (req: Request, res: Response) => {
   try {
-    // db logic
-    res.status(200).send({ data: 'updated product' });
+    console.log(req.params);
+    res.status(200).send({ data: req.params });
   } catch (error) {
-    res.send({ error: error });
+    res.send({ error });
   }
 };
 
 export default {
   getAllProducts,
-  editProductById
+  editProductById,
 };
