@@ -6,7 +6,7 @@ import router from './routes/index.routes';
 import AppDataSource from './data-source';
 import 'reflect-metadata';
 
-const PORT = 3000;
+const PORT = 4000;
 
 const app = express();
 app.use(cors());
