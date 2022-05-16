@@ -2,7 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import { createServer } from 'http';
-import router from './routes/index';
+import router from './routes/index.routes';
 import AppDataSource from './data-source';
 import 'reflect-metadata';
 

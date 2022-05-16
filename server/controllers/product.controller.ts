@@ -13,8 +13,13 @@ const getAllProducts = async (req: Request, res: Response) => {
 
 const editProductById = async (req: Request, res: Response) => {
   try {
-    console.log(req.params);
-    res.status(200).send({ data: req.params });
+    console.log(typeof Number(req.params.productid));
+    const productById = await AppDataSource.manager.findOne(Tea, {
+      where: {
+        id: Number(req.params.productid),
+      },
+    });
+    res.status(200).send({ data: productById });
   } catch (error) {
     res.send({ error });
   }
