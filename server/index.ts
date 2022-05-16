@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import { createServer } from 'http';
 import router from './routes/index';
+import { AppDataSource } from "./data-source"
 
 const PORT = 3000;
 
@@ -14,6 +15,10 @@ const httpServer = createServer(app);
 
 app.use('/', router);
 
-httpServer.listen(PORT, () => {
-  console.log(`🚀 Server up and listening on port ${PORT}`); // eslint-disable-line
-});
+AppDataSource.initialize().then(async () => {
+  httpServer.listen(PORT, () => {
+    console.log(`🚀 Server up and listening on port ${PORT}`); // eslint-disable-line
+  });
+}).catch(error => console.log(error))
+
+
