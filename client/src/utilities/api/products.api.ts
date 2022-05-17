@@ -19,12 +19,12 @@ const productsApi = {
     method: 'PATCH',
     body: JSON.stringify(product),
   })
-    .then((response) => {
-      if (response.status === 201) {
-        const result = response.json();
-        return result;
-      }
-    })
+    // .then((response) => {
+    //   if (response.status === 201) {
+    //     const result = response.json();
+    //     return result;
+    //   }
+    // })
     .catch((e) => {
       console.error(e);
     }),

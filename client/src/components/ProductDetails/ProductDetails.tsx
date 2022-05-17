@@ -23,7 +23,7 @@ export default function ProductDetails({ product }: Props) {
     updatedProduct.name = event.target[1].value;
     updatedProduct.tags = event.target[2].value;
     productsApi.editOneById(updatedProduct)
-      .then(() => setEditMode(true));
+      .then(() => setEditMode(false));
   }
 
   return (
