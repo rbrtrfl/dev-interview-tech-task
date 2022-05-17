@@ -1,22 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Product from '../../utilities/types/Product.types';
 import ProductCard from '../ProductCard/ProductCard';
-import productsApi from '../../utilities/api/products.api';
 import './ProductList.css';
 
-function ProductList() {
-  const [productList, setProductList] = useState([]);
+type Props = {
+  productList: Product[]
+}
 
-  useEffect(() => {
-    async function getProductList() {
-      const result = await productsApi.getAll();
-      if (result !== undefined) {
-        setProductList(result.data);
-      }
-    }
-    getProductList();
-  }, []);
-
+function ProductList({ productList }: Props) {
   return (
     <div className="productlist">
       <div className="productlist-card-container">

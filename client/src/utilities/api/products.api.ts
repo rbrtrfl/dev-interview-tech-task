@@ -12,6 +12,30 @@ const productsApi = {
     .catch((e) => {
       console.error(e);
     }),
+
+  getOneById: (id : string) => fetch(`${baseUrl}/${id}`)
+    .then((response) => {
+      if (response.status === 200) {
+        const result = response.json();
+        return result;
+      }
+    })
+    .catch((e) => {
+      console.error(e);
+    }),
+
+  editOneById: () => fetch(`${baseUrl}`)
+    .then((response) => {
+      if (response.status === 200) {
+        const result = response.json();
+        return result;
+      }
+    })
+    .catch((e) => {
+      console.error(e);
+    }),
+
+
 };
 
 export default productsApi;
