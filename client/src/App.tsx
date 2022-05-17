@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import ProductList from './components/ProductList/ProductList';
-import ProductDetails from './components/ProductDetails/ProductDetails';
 import productsApi from './utilities/api/products.api';
+import ProductDetails from './components/ProductDetails/ProductDetails';
+import './App.css';
 
 function App() {
   const [productList, setProductList] = useState([]);
@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="app">
       <Routes>
         <Route
           path="/"

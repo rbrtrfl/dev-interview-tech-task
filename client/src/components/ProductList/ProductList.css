@@ -6,6 +6,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   color: var(--titles);
+  background-color: inherit;
 }
 
 .productlist-card-container {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Product from '../../utilities/types/Product.types';
 import ProductCard from '../ProductCard/ProductCard';
 import './ProductList.css';
@@ -12,10 +13,14 @@ function ProductList({ productList }: Props) {
     <div className="productlist">
       <div className="productlist-card-container">
         {(productList.length > 0) && (productList.map((product : Product) => (
-          <ProductCard
+          <Link
+            to={`/${product.id}`}
             key={product.id}
-            product={product}
-          />
+          >
+            <ProductCard
+              product={product}
+            />
+          </Link>
         )))}
       </div>
     </div>
