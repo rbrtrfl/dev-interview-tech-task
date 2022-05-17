@@ -5,7 +5,7 @@
   width: 80%;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  color: var(--titles)
+  color: var(--titles);
 }
 
 .productlist-card-container {

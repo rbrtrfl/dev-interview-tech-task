@@ -34,7 +34,7 @@ function App() {
           path="/:productid"
           element={(
             <ProductDetails
-              product={productList[productId]}
+              product={productList[productId - 1]}
             />
 )}
         />
