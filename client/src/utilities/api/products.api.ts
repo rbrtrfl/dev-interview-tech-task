@@ -1,3 +1,5 @@
+import Product from "../types/Product.types";
+
 const baseUrl = 'http://127.0.0.1:4000/api';
 
 const productsApi = {
@@ -13,9 +15,12 @@ const productsApi = {
       console.error(e);
     }),
 
-  editOneById: (id : string) => fetch(`${baseUrl}/${id}`)
+  editOneById: (product: Product) => fetch(`${baseUrl}/${product.id}`, {
+    method: 'PATCH',
+    body: JSON.stringify(product),
+  })
     .then((response) => {
-      if (response.status === 200) {
+      if (response.status === 201) {
         const result = response.json();
         return result;
       }
