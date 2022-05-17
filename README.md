@@ -7,8 +7,7 @@
 • Pages should be styled using Bootstrap or any other common framework, in minimalistic fashion
 ## Middleware:
 • Routes should follow REST standard
-• Each page response should contain a custom http header called “random” and contain a system generated
-random value, that changes on each request
+• Each page response should contain a custom http header called “random” and contain a system generated random value, that changes on each request
 • Each page request should be audited
 ## Database:
 • Design database tables to fulfil the requirements above, in either MsSQL or PostgreSQL

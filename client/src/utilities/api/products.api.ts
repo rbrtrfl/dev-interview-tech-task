@@ -1,4 +1,4 @@
-import Product from "../types/Product.types";
+import Product from '../types/Product.types';
 
 const baseUrl = 'http://127.0.0.1:4000/api';
 

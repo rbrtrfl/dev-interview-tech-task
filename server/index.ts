@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import { createServer } from 'http';
+import { v4 as uuidv4 } from 'uuid';
 import router from './routes/index.routes';
 import AppDataSource from './data-source';
 import 'reflect-metadata';
@@ -14,6 +15,10 @@ app.use(morgan('short'));
 app.use(express.json());
 const httpServer = createServer(app);
 
+app.use((req, res, next) => {
+  res.set('random', String(uuidv4()));
+  next();
+});
 app.use('/', router);
 
 AppDataSource.initialize().then(async () => {
