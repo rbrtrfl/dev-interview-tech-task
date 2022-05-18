@@ -1,0 +1,46 @@
+[
+  {
+    "timestamp": 1652868189709,
+    "rawHeaders": [
+      "User-Agent",
+      "PostmanRuntime/7.29.0",
+      "Accept",
+      "*/*",
+      "Postman-Token",
+      "e909cabe-ca2f-431a-b29a-38bf43aec4a4",
+      "Host",
+      "127.0.0.1:4000",
+      "Accept-Encoding",
+      "gzip, deflate, br",
+      "Connection",
+      "keep-alive"
+    ],
+    "httpVersion": "1.1",
+    "method": "GET",
+    "remoteAddress": "::ffff:127.0.0.1",
+    "remoteFamily": "IPv6",
+    "url": "/api"
+  },
+  {
+    "timestamp": 1652868197939,
+    "rawHeaders": [
+      "User-Agent",
+      "PostmanRuntime/7.29.0",
+      "Accept",
+      "*/*",
+      "Postman-Token",
+      "05599c14-dfbf-4e32-86e0-3b7f01e2bb4a",
+      "Host",
+      "127.0.0.1:4000",
+      "Accept-Encoding",
+      "gzip, deflate, br",
+      "Connection",
+      "keep-alive"
+    ],
+    "httpVersion": "1.1",
+    "method": "GET",
+    "remoteAddress": "::ffff:127.0.0.1",
+    "remoteFamily": "IPv6",
+    "url": "/api"
+  }
+]

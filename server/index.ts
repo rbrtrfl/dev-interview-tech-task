@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import router from './routes/index.routes';
 import AppDataSource from './data-source';
 import 'reflect-metadata';
+import logger from './middleware/logger.middleware';
 
 const PORT = 4000;
 
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
   res.set('random', String(uuidv4()));
   next();
 });
+app.use(logger);
 app.use('/', router);
 
 AppDataSource.initialize().then(async () => {

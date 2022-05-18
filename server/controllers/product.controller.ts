@@ -19,7 +19,7 @@ const editProductById = async (req: Request, res: Response) => {
       },
     });
     Object.assign(productById, req.body);
-    res.status(201).send({ data: productById });
+    res.status(204).send({ data: productById });
   } catch (error) {
     res.send({ error });
   }

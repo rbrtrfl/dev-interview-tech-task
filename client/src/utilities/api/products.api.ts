@@ -20,7 +20,7 @@ const productsApi = {
     body: JSON.stringify(product),
   })
     // .then((response) => {
-    //   if (response.status === 201) {
+    //   if (response.status === 204) {
     //     const result = response.json();
     //     return result;
     //   }
