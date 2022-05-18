@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Product from '../../utilities/types/Product.types';
 import './ProductDetails.css';
-import { ReactComponent as AiFillEdit } from '../../assets/AiFillEdit.svg';
 import productsApi from '../../utilities/api/products.api';
 
 type Props = {
