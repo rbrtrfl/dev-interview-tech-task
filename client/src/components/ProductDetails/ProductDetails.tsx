@@ -45,8 +45,10 @@ export default function ProductDetails({ product }: Props) {
                 <option value={bean()}>{bean()}</option>
               </select>
             </div>
-            <button type="submit">Save</button>
-            <button type="button" onClick={() => setEditMode(!editMode)}>Cancel</button>
+            <div className="productdetails-button">
+              <button type="submit">Save</button>
+              <button type="button" onClick={() => setEditMode(!editMode)}>Cancel</button>
+            </div>
           </form>
         )
         : (
@@ -58,9 +60,11 @@ export default function ProductDetails({ product }: Props) {
               </div>
               <h4 className={`productdetails-tags-${product.tags.toLowerCase()}`}>{product.tags}</h4>
             </div>
-            <button type="button" onClick={() => setEditMode(!editMode)}>
-              <AiFillEdit />
-            </button>
+            <div className="productdetails-button">
+              <button type="button" onClick={() => setEditMode(!editMode)}>
+                Edit
+              </button>
+            </div>
           </div>
         )}
     </div>
